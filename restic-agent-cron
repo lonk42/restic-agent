@@ -1,0 +1,6 @@
+# Default schedule is around 2-3 am
+#15 3 * * 0-5 root /home/git/restic-agent/restic-backup.sh &>> /home/git/restic-agent/restic-agent.log
+#15 3 * * 6 root /home/git/restic-agent/restic-backup.sh --prune &>> /home/git/restic-agent/restic-agent.log
+
+# For flat directories
+#15 3 * * * root /home/git/restic-agent/restic-backup-flat.sh &>> /home/git/restic-agent/restic-agent-flat.log
