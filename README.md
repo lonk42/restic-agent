@@ -10,17 +10,15 @@ defaults.config provides examples or available options, to customize these make 
 cp defaults.config config
 ```
 
-## Keys and Credentials
-
-### Backblaze key
-The scripts expect your backblaze keys in the file 'b2-auth.secret', it must follow the below format.
+### Backblaze credentials
+Your config needs your backblaze keys, the export is required.
 ```
 export B2_ACCOUNT_KEY="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 export B2_ACCOUNT_ID="YYYYYYYYYYYYYYYYYYYYYYY"
 ```
 
-### Restic key
-The key to encrypt your restic backups needs to be in the file 'restic-password.secret', there is no format the entire string is read as the key
+### Restic password file
+The key to encrypt your restic backups needs to be in the file 'restic-password.secret', there is no format the entire string is read as the key. The location of this file can be adjusted with the config variable 'RESTIC_PASSWORD_FILE'.
 
 ### Restic master key
 The master key is optional if using the 'master' scripts, the format as the restic key.
